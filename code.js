@@ -3,78 +3,78 @@
 const Question1 = {
     question: "Question 1: What button do you press to group or un-group a stop?",
     answers :[   
-       "A).Help Menu Button",
-        "B).Back Button",
-        "C).Driver Support Button",
-        "D).Edit Stop Button",
-        "E).All of the above",
+       "A) Help Menu Button",
+        "B) Back Button",
+        "C) Driver Support Button",
+        "D) Edit Stop Button",
+        "E) All of the above",
     ],
-    correctAnswer : "D).Edit Stop Button",
+    correctAnswer : "D) Edit Stop Button",
 
 }
 
 const Question2 = {
     question: "Question 2: Are you allowed to remove Stops from multi-location deliveries?",
     answers :[   
-       "A).No",
+       "A) No",
 
-        "B).Yes",
+        "B) Yes",
     ],
-    correctAnswer : "B).Yes"
+    correctAnswer : "B) Yes"
 }
    
 const Question3 = {
     question: " Question 3: What does a greyed out area in a location mean?",
     answers :[   
-       "A).A business is closed",
+       "A) A business is closed",
 
-        "B).That I'm running late",
+        "B) That I'm running late",
 
-        "C).The customer says they do not have time to accept my delivery",
+        "C) The customer says they do not have time to accept my delivery",
 
-        "D).The location has different requirements from another stop", 
+        "D) The location has different requirements from another stop", 
 
-        "E).All of the above",
+        "E) All of the above",
 
     ],
-    correctAnswer: "D).The location has different requirements from another stop" 
+    correctAnswer: "D) The location has different requirements from another stop" 
    
 } 
 const Question4 = {
     question: " Question 4: (True or False) if your device loses connectivity, you can still modify your stops",
     answers :[   
-       "A).True",
+       "A) True",
 
-        "B).False",
+        "B) False",
 
     ],
-    correctAnswer: "B).False"
+    correctAnswer: "B) False"
    
 } 
 const Question5 = {
     question: " Question 5: Grouping requests are instant?",
     answers :[   
-       "A).No",
+       "A) No",
 
-        "B).Yes",
+        "B) Yes",
 
     ],
-    correctAnswer: "B).Yes"
+    correctAnswer: "A) No"
    
 } 
 const Question6 = {
     question: " Question 6: What are the restrictions to grouping stops?",
     answers :[   
-       "A).Time Constraints",
+       "A) Time Constraints",
 
-        "B).Distance over 100 meters",
+        "B) Distance over 100 meters",
 
-        "C).Stops with special requirements",
+        "C) Stops with special requirements",
 
-        "D).All of the above", 
+        "D) All of the above", 
 
     ],
-    correctAnswer: "D).All of the above"
+    correctAnswer: "D) All of the above"
    
 } 
 
@@ -100,12 +100,13 @@ message.style.position = 'absolute'
 message.style.placeSelf = 'center'
 message.style.color = 'white'
 message.style.width = '60%'
-message.style.height = "80%"
+message.style.height = "100%"
 
 message.style.fontSize = "40px"
 message.style.textAlign = "center"
 message.style.placeContent = 'center'
 message.style.paddingTop = '30px'
+message.style.paddingBottom = '30px'
 message.style.borderRadius = '10px'
 message.style.display = 'none'
 
@@ -145,7 +146,7 @@ Obj.answers.forEach((answer) => {
         answerCont.style.height= '80%'
         btn.style.border= '7px solid red'
         message.style.border= '7px solid red'
-            message.innerHTML = 'Incorrect! <br> <span id= no>&#9757;&#127997;</span> <br> <br><u>Click here</u><br>to try again!'
+            message.innerHTML = 'Incorrect! <br> <span>&#9757;&#127997;</span> <br> <br><u>Click here</u><br>to try again!'
            message.style.display = 'block'
            
           
@@ -199,9 +200,8 @@ Obj.answers.forEach((answer) => {
 
 
 
-
-
-
+let prev = document.getElementById('prev')
+prev.style.display = 'none'
 display(Question1)
 let index = 1;
 let next = document.getElementById('next')
@@ -217,36 +217,42 @@ if(index == 1){
     display(Question1)
     next.style.display = 'none'
 }  if (index == 2){
+    
     for(let i =0; i<= Question1.answers.length; i++){
         answerCont.removeChild(answerCont.firstElementChild)
     }
     display(Question2)
     next.style.display = 'none'
 }  if( index == 3 ){
+    
     for(let i =0; i<= Question2.answers.length; i++){
         answerCont.removeChild(answerCont.firstElementChild)
     }
     display(Question3)
     next.style.display = 'none'
 }if( index == 4 ){
+    
     for(let i =0; i<= Question3.answers.length; i++){
         answerCont.removeChild(answerCont.firstElementChild)
     }
     display(Question4)
     next.style.display = 'none'
 }if( index == 5 ){
+
     for(let i =0; i<= Question4.answers.length; i++){
         answerCont.removeChild(answerCont.firstElementChild)
     }
     display(Question5)
     next.style.display = 'none'
 }if( index == 6 ){
+    
     for(let i =0; i<= Question5.answers.length; i++){
         answerCont.removeChild(answerCont.firstElementChild)
     }
     display(Question6)
     next.style.display = 'none'
 }else if(index >= 7){
+
     for(let i =0; i<= Question6.answers.length; i++){
         answerCont.removeChild(answerCont.firstElementChild)
     }
