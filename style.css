@@ -1,0 +1,211 @@
+
+body{
+    
+    width: 100%;
+    height: 100%;
+    display: grid;
+        align-content: center;
+        background-image: url(242424-hawaii-sunset-wallpaper.jpg);
+        background-size:cover;
+         align-items: center;
+         color: #ffffff;
+         align-items: center;
+        
+    
+}
+#Shaka{
+    font-size: 90px;
+    position: relative; /* Needed for the left property to work */
+    animation: move 1s infinite alternate;
+}
+@keyframes move {
+    from {
+        right: -10px;
+        top: 70px;
+
+       
+    }
+    to{
+        top: 10px;
+        right:50px;
+    }
+    
+}
+
+header{
+background:#010424;
+flex-wrap: wrap;
+width: 100%;
+display:flex;
+flex-wrap: wrap;
+margin: 0;
+padding: 0px;
+padding-bottom: 5px ;
+text-align: center;
+display: flex;
+
+top: 0px;
+color: #ffffff;
+justify-content: space-around; 
+
+}
+#cont{
+
+
+width: 100%;
+display: grid;
+    place-self: center;
+    align-content: center;
+    background-color:transparent;
+     align-items: center;
+     color: #ffffff;
+     align-items: center;
+     height: 60%;
+    
+}
+h2{
+    text-align: center;
+}
+#welcome{ 
+    text-shadow: 2px 2px 5px black;
+
+margin-top: 30px;
+padding-left: 20px;
+padding-right: 20px;
+ height: 100%;
+ box-shadow: 3px #272343;
+ border-radius: 5px;
+width: 60%;
+display: grid;
+font-size: 180%;
+place-self: center;
+    align-content: center;
+    background-color: black;
+    background: rgba(255, 255, 255, 0.3); 
+    backdrop-filter: blur(10px);
+     align-items: center;
+     color: white;
+     align-items: center;
+     border-radius: 10px;
+box-shadow: 10px 15px 35px #272343;
+
+}
+#start{
+place-self: center;
+font-size: 30px;
+padding-top: 10px;
+padding-bottom: 10px;
+width :30%;
+border-radius: 10px;
+
+
+}
+#start:hover{
+color: #ffffff;
+background: #082f4d;
+}
+
+#quiz{
+
+width: 100%;
+height: 100%;
+display: grid;
+    place-self: center;
+    align-content: center;
+    background-color: black;
+    background: rgba(255, 255, 255, 0.3); 
+    backdrop-filter: blur(10px);     align-items: center;
+     color: black;
+     align-items: center;   
+     display: none;
+}
+
+#buttons{
+place-self: center;
+
+ 
+ height: 40px;
+ width: 80%;
+}
+#question{
+font-size: 60px;
+padding-top: 15px;
+place-self: center;
+text-align: center;
+color: white;
+text-shadow: 2px 2px 5px black;
+height: 90%;
+width: 70%;
+
+}
+#answers button{
+    background-color: rgb(155, 205, 249);
+    font-size: 29.5px;
+}
+
+#answers{
+
+display: grid;
+padding-top: 15px;
+place-self: center ;
+padding-bottom: 10px;
+
+place-content: center;
+color: black;
+row-gap: 10px;
+width: 100%;
+height: 90%;
+}
+.Btn{
+font-size: 20px;
+color: black;
+}
+
+.Btn:hover{
+box-shadow: 10px 15px 35px #272343;
+}
+#buttons{
+display: grid;
+}
+#buttons button{
+width: 15%;
+height: 95%;
+font-size: 23px;
+}
+#perv{
+display: none;
+}
+#buttons button:hover{
+    color: #ffffff;
+    background-color: #082f4d;
+box-shadow: 10px 15px 35px #272343;
+
+}
+button{
+color: black;
+}
+
+@media only screen and (max-width:500px) {
+
+#welcome{
+font-size: 18px;
+}
+#start{
+font-size: 15px;
+}
+.message{
+font-size: 10px;
+width: 100%;
+}
+.message{
+top: 25%;
+left: 13%;
+}
+#question{
+    font-size: 25px;
+}
+#answers button{
+    background-color: rgb(155, 205, 249);
+    font-size: 20px;
+}
+}
