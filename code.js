@@ -145,7 +145,7 @@ Obj.answers.forEach((answer) => {
         answerCont.style.height= '80%'
         btn.style.border= '7px solid red'
         message.style.border= '7px solid red'
-            message.innerHTML = 'Incorrect! &#128034 <br> <br><u>Click here</u><br>to try again!'
+            message.innerHTML = 'Incorrect! <br> <span id= no>&#9757;&#127997;</span> <br> <br><u>Click here</u><br>to try again!'
            message.style.display = 'block'
            
           
@@ -211,7 +211,7 @@ next.addEventListener('click',()=>{
 index ++;
 
 if(index == 1){
-    for(let i =0; i<= Obj.answers.length; i++){
+    for(let i =0; i<= 5; i++){
         answerCont.removeChild(answerCont.firstElementChild)
     }
     display(Question1)
@@ -227,6 +227,24 @@ if(index == 1){
         answerCont.removeChild(answerCont.firstElementChild)
     }
     display(Question3)
+    next.style.display = 'none'
+}if( index == 4 ){
+    for(let i =0; i<= Question3.answers.length; i++){
+        answerCont.removeChild(answerCont.firstElementChild)
+    }
+    display(Question4)
+    next.style.display = 'none'
+}if( index == 5 ){
+    for(let i =0; i<= Question4.answers.length; i++){
+        answerCont.removeChild(answerCont.firstElementChild)
+    }
+    display(Question5)
+    next.style.display = 'none'
+}if( index == 6 ){
+    for(let i =0; i<= Question5.answers.length; i++){
+        answerCont.removeChild(answerCont.firstElementChild)
+    }
+    display(Question6)
     next.style.display = 'none'
 }else if(index >= 7){
     for(let i =0; i<= Question6.answers.length; i++){

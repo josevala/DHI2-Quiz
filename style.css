@@ -184,7 +184,25 @@ box-shadow: 10px 15px 35px #272343;
 button{
 color: black;
 }
+.message span{
+    font-size: 90px;
+    position: relative; /* Needed for the left property to work */
+    animation: no 1s infinite alternate; 
+}
 
+@keyframes no {
+    from {
+        right: -10px;
+        
+
+       
+    }
+    to{
+        
+        right:50px;
+    }
+    
+}
 @media only screen and (max-width:500px) {
 
 #welcome{
